@@ -1,0 +1,11 @@
+const {BehaviorSubject} = require('rxjs')
+
+const demoBehavior = new BehaviorSubject('默认值')
+
+demoBehavior.subscribe({
+    next:function (value) {
+        console.log(value)
+    }
+})
+
+demoBehavior.next('Hello')
